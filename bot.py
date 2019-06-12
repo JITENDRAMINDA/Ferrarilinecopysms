@@ -30,7 +30,7 @@ def forawrd(client, message):
 
 app.run()
 from pyrogram import Client, Filters,Emoji
-app = Client('my_account',728044,"a41ddadc9696482aff94a4b37221574a")
+app = Client('my_account',488556, "c722b7aadbf8b72109b2f96f30974c6d")
 
 
 
