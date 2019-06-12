@@ -67,7 +67,7 @@ def forward(client, message):
                files.close()
         elif message.text == 'WD' :
             client.send_message(int(u),'🤦‍♂️ **WIDE BALL** 🤦‍♂️')
-        elif message.text.casefold() == 'WKT'.casefold() :
+        elif message.text.casefold() == '🚾WICKET WICKET WICKET 🚾'.casefold() :
             client.send_message(int(u),'🚾** Wicket Wicket Wicket** 🚾 ') 
         elif 'NO BALL' in message.text:
             client.send_message(int(u),'🔛** NO BALL **🔛' )
@@ -77,8 +77,6 @@ def forward(client, message):
             client.send_message(int(u), '🔁** DEAD BALL **🔄') 
         elif message.text.casefold() == 'RUKA'.casefold():
             client.send_message(int(u), '🛑** BOWLER RUKA **🛑')
-        elif message.text.casefold() == '🚾WICKET WICKET🚾'.casefold():
-            client.send_message(int(u),'🚾** Wicket Wicket Wicket **🚾')
         else:
             mes = client.send_message(int(u), "**" + message.text.replace('🎾' , '🥎') + "**")
             file = open("sure.txt" , "r")
