@@ -65,13 +65,13 @@ def forward(client, message):
                files = open("sure.txt" , "w")
                files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
                files.close()
-        elif message.text == 'WD' :
+        elif message.text == 'WIDE ✔️✔️' :
             client.send_message(int(u),'🤦‍♂️ **WIDE BALL** 🤦‍♂️')
         elif message.text.casefold() == '🚾WICKET WICKET WICKET 🚾'.casefold() :
             client.send_message(int(u),'🚾** Wicket Wicket Wicket** 🚾 ') 
         elif 'NO BALL' in message.text:
             client.send_message(int(u),'🔛** NO BALL **🔛' )
-        elif 'DRINKS BREAK' in message.text:
+        elif '🍷 DRINKS 🍷                                          BREAK✔️✔️' in message.text:
             client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
         elif 'DEAD BALL' in message.text:
             client.send_message(int(u), '🔁** DEAD BALL **🔄') 
