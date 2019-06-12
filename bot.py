@@ -47,8 +47,8 @@ def forward(client, message):
         if word.casefold() in text.casefold():
             f = True
     if not f:
-        if '🖲' in message.text:
-            mes = client.send_message(int(u),"**" + message.text.replace('🖲' , '💘') + "**")
+        if '🕵🏻' in message.text:
+            mes = client.send_message(int(u),"**" + message.text.replace('🕵🏻' , '🔘') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
@@ -56,8 +56,8 @@ def forward(client, message):
                files = open("sure.txt" , "w")
                files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
                files.close()
-        elif '📟' in message.text :
-            mes = client.send_message(int(u),"**" + message.text.replace('📟' , '🏝') + "**")
+        elif '☎️' in message.text :
+            mes = client.send_message(int(u),"**" + message.text.replace('☎️' , '🏝') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
