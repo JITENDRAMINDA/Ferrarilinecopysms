@@ -104,10 +104,10 @@ def forward(client, message):
    x = line.split()
    id = str(message.message_id)
    if id in x:
-     if '🖲' in message.text:
-        client.edit_message_text(int(u),int(x[x.index(id)+1]), "**" + message.text.replace('🖲' , '💘') + "**" )
-     elif '📟' in message.text :
-        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('📟' , '🏝') + "**")
+     if '🕵🏻' in message.text:
+        client.edit_message_text(int(u),int(x[x.index(id)+1]), "**" + message.text.replace('🕵🏻' , '🔘') + "**" )
+     elif '☎️' in message.text :
+        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('☎️' , '🏝') + "**")
      else:
         client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('🎾' , '🥎')+ "**")
      
