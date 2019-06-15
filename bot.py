@@ -1,7 +1,7 @@
 
 from pyrogram import Client, Filters,Emoji
 
-app = Client("my"869912,"a7b049e08df35464047d57e5134327e5")
+app = Client("my",869912,"a7b049e08df35464047d57e5134327e5")
 
 
 
