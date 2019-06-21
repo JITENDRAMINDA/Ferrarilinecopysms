@@ -80,7 +80,7 @@ def forward(client, message):
 @app.on_message(Filters.command("clear"))
 def main(client, message):
   files = open("sure.txt" , "w")
-  files.write( line + " " + str("001 002")
+  files.write("001 002")
   files.close()
   message.reply("Done") 
         
