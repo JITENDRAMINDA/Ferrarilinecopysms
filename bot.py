@@ -77,6 +77,11 @@ def forward(client, message):
         client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('🎾' , '🥎')+ "**")
      
           
-     
+@app.on_message(Filters.command("clear"))
+def main(client, message):
+  files = open("sure.txt" , "w")
+  files.write( line + " " + str("001 002")
+  files.close()
+  message.reply("Done") 
         
 app.run()
