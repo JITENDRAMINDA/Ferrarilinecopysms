@@ -1,5 +1,5 @@
 from pyrogram import Client, Filters,Emoji
-app = Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
+app = Client("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
 @app.on_message(Filters.chat(-1001262096355) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
