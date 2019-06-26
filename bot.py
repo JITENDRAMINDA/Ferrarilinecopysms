@@ -2,11 +2,10 @@ from pyrogram import Client, Filters,Emoji
 app = Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
 @app.on_message(Filters.chat(-1001100924541) & Filters.text & ~Filters.edited)
 def forward(client, message):
- text = message.text
  f = False
  words = ['dekho','fix','😱','😢','😳','fixer','👆','👇','match','pass','sab','chase','defend','hai','karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teenpatti','diya','bhai','😀','😑','😐','😊','😜','😇','😎','😂','😘','😋','😝','🥺','members','🖕','member','only','chut','lund','gand','ma','maa','bhosdi','bahan','loude','lode','lavde','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔','LUND',"LU","?","loda","lodu","telegram"]
  for word in words:
-  if word.casefold() in text.casefold():
+  if word.casefold() in message.text.casefold():
    f = True
  if not f:
   mes = client.send_message(-1001274887387,"**" + message.text + "**")
