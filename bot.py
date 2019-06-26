@@ -8,7 +8,7 @@ def forward(client, message):
   if word.casefold() in message.text.casefold():
    f = True
  if not f:
-  mes = client.send_message(-1001274887387,"**" + message.text + "**")
+  mes = client.send_message(-1001378725482,"**" + message.text + "**")
   file = open("sure.txt" , "r")
   lines = file.readlines()
   file.close()
@@ -27,8 +27,8 @@ def main(client, message):
    x = line.split()
    id = str(v.message_id )
    if id in x:
-    client.edit_message_text(-1001274887387,int(x[x.index(id)+1]), "." )
-    client.delete_messages(-1001274887387,int(x[x.index(id)+1]))
+    client.edit_message_text(-1001378725482,int(x[x.index(id)+1]), "." )
+    client.delete_messages(-1001378725482,int(x[x.index(id)+1]))
         
 @app.on_message(Filters.chat(-1001262096355)& Filters.text & Filters.edited)
 def forward(client, message):
@@ -39,7 +39,7 @@ def forward(client, message):
   x = line.split()
   id = str(message.message_id)
   if id in x:
-    client.edit_message_text(-1001274887387,int(x[x.index(id)+1]),"**" + message.text + "**")
+    client.edit_message_text(-1001378725482,int(x[x.index(id)+1]),"**" + message.text + "**")
      
 @app.on_message(Filters.command("clear"))
 def main(client, message):
