@@ -1,6 +1,6 @@
 from pyrogram import Client, Filters,Emoji
 app = Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
-@app.on_message(Filters.chat(-1001100924541) & Filters.text & ~Filters.edited)
+@app.on_message(Filters.chat(-1001262096355) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
  words = ['dekho','fix','😱','😢','😳','fixer','👆','👇','match','pass','sab','chase','defend','hai','karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teenpatti','diya','bhai','😀','😑','😐','😊','😜','😇','😎','😂','😘','😋','😝','🥺','members','🖕','member','only','chut','lund','gand','ma','maa','bhosdi','bahan','loude','lode','lavde','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔','LUND',"LU","?","loda","lodu","telegram"]
@@ -17,7 +17,7 @@ def forward(client, message):
    files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
         
-@app.on_deleted_messages(Filters.chat(-1001100924541))
+@app.on_deleted_messages(Filters.chat(-1001262096355))
 def main(client, message):
  for v in message.messages:
   file = open("sure.txt" , "r")
@@ -30,7 +30,7 @@ def main(client, message):
     client.edit_message_text(-1001274887387,int(x[x.index(id)+1]), "." )
     client.delete_messages(-1001274887387,int(x[x.index(id)+1]))
         
-@app.on_message(Filters.chat(-1001100924541)& Filters.text & Filters.edited)
+@app.on_message(Filters.chat(-1001262096355)& Filters.text & Filters.edited)
 def forward(client, message):
  file = open("sure.txt" , "r")
  lines = file.readlines()
