@@ -9,13 +9,9 @@ def forward(client, message):
    f = True
  if not f:
   mes = client.send_message(-1001378725482,"**" + message.text + "**")
-  file = open("sure.txt" , "r")
-  lines = file.readlines()
-  file.close()
-  for line in lines:
-   files = open("sure.txt" , "w")
-   files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
-   files.close()
+  files = open("sure.txt" , "w")
+  files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
+  files.close()
         
 @app.on_deleted_messages(Filters.chat(-1001262096355))
 def main(client, message):
