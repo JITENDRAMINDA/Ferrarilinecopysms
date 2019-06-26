@@ -1,8 +1,8 @@
 from pyrogram import Client, Filters,Emoji
 app = Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
-u = '-1001274887387'
-s = '-1001100924541'
-@app.on_message(Filters.chat(int(s))& Filters.text & ~Filters.edited)
+u = ''
+s = ''
+@app.on_message(Filters.chat(-1001100924541) & Filters.text & ~Filters.edited)
 def forward(client, message):
  text = message.text
  f = False
@@ -11,7 +11,7 @@ def forward(client, message):
   if word.casefold() in text.casefold():
    f = True
  if not f:
-  mes = client.send_message(int(u),"**" + message.text + "**")
+  mes = client.send_message(-1001274887387,"**" + message.text + "**")
   file = open("sure.txt" , "r")
   lines = file.readlines()
   file.close()
@@ -20,7 +20,7 @@ def forward(client, message):
    files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
         
-@app.on_deleted_messages(Filters.chat(int(s)))
+@app.on_deleted_messages(Filters.chat(-1001100924541))
 def main(client, message):
  for v in message.messages:
   file = open("sure.txt" , "r")
@@ -30,10 +30,10 @@ def main(client, message):
    x = line.split()
    id = str(v.message_id )
    if id in x:
-    client.edit_message_text(int(u),int(x[x.index(id)+1]), "." )
-    client.delete_messages(int(u),int(x[x.index(id)+1]))
+    client.edit_message_text(-1001274887387,int(x[x.index(id)+1]), "." )
+    client.delete_messages(-1001274887387,int(x[x.index(id)+1]))
         
-@app.on_message(Filters.chat(int(s))& Filters.text & Filters.edited)
+@app.on_message(Filters.chat(-1001100924541)& Filters.text & Filters.edited)
 def forward(client, message):
  file = open("sure.txt" , "r")
  lines = file.readlines()
@@ -42,7 +42,7 @@ def forward(client, message):
   x = line.split()
   id = str(message.message_id)
   if id in x:
-    client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text + "**")
+    client.edit_message_text(-1001274887387,int(x[x.index(id)+1]),"**" + message.text + "**")
      
 @app.on_message(Filters.command("clear"))
 def main(client, message):
