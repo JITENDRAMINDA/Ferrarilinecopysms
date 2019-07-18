@@ -55,9 +55,9 @@ def main(client, message):
 @app.on_message(Filters.command("set"))
 def main(client, message):
   with open("source.txt" , "w") as file:
-  files.write(message.text.split(" ")[1])
-  files.close()
-  message.reply("Done") 
+   files.write(message.text.split(" ")[1])
+   files.close()
+   message.reply("Done") 
         
         
 app.run()
