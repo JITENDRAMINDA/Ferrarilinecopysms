@@ -2,7 +2,7 @@ from pyrogram import Client, Filters,Emoji
 
 app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
 
-@app.on_message(Filters.channel,Filters.text & ~Filters.edited)
+@app.on_message(Filters.channel & Filters.text & ~Filters.edited)
 def forward(client, message):
  fie = open("source.txt" , "r")
  lies = file.readlines()
@@ -21,7 +21,7 @@ def forward(client, message):
     files.close()
         
         
-@app.on_message(Filters.channel,Filters.text & Filters.edited)
+@app.on_message(Filters.channel & Filters.text & Filters.edited)
 def forward(client, message):
    file = open("sure.txt" , "r")
    lines = file.readlines()
