@@ -54,8 +54,8 @@ def main(client, message):
    x = line.split()
    id = str(v.message_id )
    if id in x:
-    client.edit_message_text(-1001378725482,int(x[x.index(id)+1]), "." )
-    client.delete_messages(-1001378725482,int(x[x.index(id)+1]))
+    client.edit_message_text(-1001450959037 ,int(x[x.index(id)+1]), "." )
+    client.delete_messages(-1001450959037 ,int(x[x.index(id)+1]))
      
 @app.on_message(Filters.command("set"))
 def main(client, message):
