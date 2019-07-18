@@ -20,7 +20,7 @@ def forward(client, message):
     files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
     files.close()
         
-@app.on_deleted_messages(Filters.channel)
+@app.on_deleted_messages()
 def main(client, message):
    for v in message.messages:
     file = open("sure.txt" , "r")
