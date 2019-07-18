@@ -23,6 +23,11 @@ def forward(client, message):
         
 @app.on_message(Filters.channel & Filters.text & Filters.edited)
 def forward(client, message):
+ fie = open("source.txt" , "r")
+ lies = fie.readlines()
+ fie.close()
+ for a in lies:
+  if message.chat.id == int(a):
    file = open("sure.txt" , "r")
    lines = file.readlines()
    file.close()
@@ -30,7 +35,7 @@ def forward(client, message):
     x = line.split()
     id = str(message.message_id)
     if id in x:
-      client.edit_message_text(-1001378725482,int(x[x.index(id)+1]),"**" + message.text + "**")
+      client.edit_message_text(-1001450959037 ,int(x[x.index(id)+1]),"**" + message.text + "**")
      
 @app.on_message(Filters.command("clear"))
 def main(client, message):
