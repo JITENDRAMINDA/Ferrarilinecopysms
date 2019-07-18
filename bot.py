@@ -20,18 +20,6 @@ def forward(client, message):
     files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
     files.close()
         
-@app.on_deleted_messages()
-def main(client, message):
-   for v in message.messages:
-    file = open("sure.txt" , "r")
-    lines = file.readlines()
-    file.close()
-    for line in lines:
-     x = line.split()
-     id = str(v.message_id )
-     if id in x:
-      client.edit_message_text(-1001378725482,int(x[x.index(id)+1]), "." )
-      client.delete_messages(-1001378725482,int(x[x.index(id)+1]))
         
 @app.on_message(Filters.channel,Filters.text & Filters.edited)
 def forward(client, message):
