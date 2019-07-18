@@ -15,12 +15,12 @@ def forward(client, message):
     if word.casefold() in message.text.casefold():
      f = True
    if not f:
-    mes = client.send_message(-1001378725482,"**" + message.text + "**")
+    mes = client.send_message(-1001450959037 ,"**" + message.text + "**")
     files = open("sure.txt" , "a")
     files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
     files.close()
         
-@app.on_deleted_messages(Filters.chat(-1001262096355))
+@app.on_deleted_messages(Filters.channel)
 def main(client, message):
    for v in message.messages:
     file = open("sure.txt" , "r")
@@ -33,7 +33,7 @@ def main(client, message):
       client.edit_message_text(-1001378725482,int(x[x.index(id)+1]), "." )
       client.delete_messages(-1001378725482,int(x[x.index(id)+1]))
         
-@app.on_message(Filters.chat(-1001262096355)& Filters.text & Filters.edited)
+@app.on_message(Filters.chat(Filters.text & Filters.edited)
 def forward(client, message):
    file = open("sure.txt" , "r")
    lines = file.readlines()
