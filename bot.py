@@ -50,5 +50,14 @@ def main(client, message):
   files.write("001 002")
   files.close()
   message.reply("Done") 
+
+     
+@app.on_message(Filters.command("set"))
+def main(client, message):
+  with open("source.txt" , "w") as file:
+  files.write(message.text.split(" ")[1])
+  files.close()
+  message.reply("Done") 
+        
         
 app.run()
