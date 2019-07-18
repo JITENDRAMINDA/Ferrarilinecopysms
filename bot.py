@@ -44,6 +44,18 @@ def main(client, message):
   files.close()
   message.reply("Done") 
 
+@app.on_deleted_messages(Filters.channel)
+def main(client, message):
+ for v in message.messages:
+  file = open("sure.txt" , "r")
+  lines = file.readlines()
+  file.close()
+  for line in lines:
+   x = line.split()
+   id = str(v.message_id )
+   if id in x:
+    client.edit_message_text(-1001378725482,int(x[x.index(id)+1]), "." )
+    client.delete_messages(-1001378725482,int(x[x.index(id)+1]))
      
 @app.on_message(Filters.command("set"))
 def main(client, message):
