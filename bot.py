@@ -1,9 +1,6 @@
 from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
-
- 
-
-app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
+app =  Client("session",728044,"a41ddadc9696482aff94a4b37221574a")
 s = -1001478751161
 d = -1001389627457
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
