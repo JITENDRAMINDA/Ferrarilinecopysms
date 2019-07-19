@@ -1,4 +1,7 @@
 from pyrogram import Client, Filters,Emoji
+from pyrogram.errors import FloodWait
+
+ 
 
 app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
 s = -1001478751161
@@ -30,7 +33,10 @@ def forward(client, message):
     x = line.split()
     id = str(message.message_id)
     if id in x:
+     try:
       client.edit_message_text(d,int(x[x.index(id)+1]),"**" + message.text + "**")
+     except FloodWait as e:
+      time.sleep(e.x)
 
 @app.on_deleted_messages(Filters.chat(s))
 def main(client, message):
