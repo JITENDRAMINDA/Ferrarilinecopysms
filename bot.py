@@ -18,22 +18,17 @@ def forward(client, message):
         
 @app.on_message(Filters.chat(s) & Filters.text & Filters.edited)
 def forward(client, message):
- fie = open("source.txt" , "r")
- lies = fie.readlines()
- fie.close()
- for a in lies:
-  if message.chat.id == int(a):
-   file = open("sure.txt" , "r")
-   lines = file.readlines()
-   file.close()
-   for line in lines:
-    x = line.split()
-    id = str(message.message_id)
-    if id in x:
-     try:
-      client.edit_message_text(d,int(x[x.index(id)+1]),"**" + message.text + "**")
-     except FloodWait as e:
-      time.sleep(e.x)
+ file = open("sure.txt" , "r")
+ lines = file.readlines()
+ file.close()
+ for line in lines:
+  x = line.split()
+  id = str(message.message_id)
+  if id in x:
+   try:
+    client.edit_message_text(d,int(x[x.index(id)+1]),"**" + message.text + "**")
+   except FloodWait as e:
+    time.sleep(e.x)
 
 @app.on_deleted_messages(Filters.chat(s))
 def main(client, message):
