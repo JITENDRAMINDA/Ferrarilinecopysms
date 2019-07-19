@@ -1,7 +1,8 @@
 from pyrogram import Client, Filters,Emoji
 
 app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
-
+s = -1001478751161
+d = -1001389627457
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
