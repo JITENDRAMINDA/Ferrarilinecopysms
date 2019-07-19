@@ -15,7 +15,7 @@ def forward(client, message):
   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
   files.close()
         
-@app.on_message(Filters.channel & Filters.text & Filters.edited)
+@app.on_message(Filters.chat(s) & Filters.text & Filters.edited)
 def forward(client, message):
  fie = open("source.txt" , "r")
  lies = fie.readlines()
