@@ -1,12 +1,12 @@
 from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
-app =  Client("session",728044,"a41ddadc9696482aff94a4b37221574a")
+app =  Client ("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
 s = -1001146486274
 d = -1001360119073
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
- words = ['dekho','fix','😱','😢','😳','fixer','👆','👇','match','pass','sab','chase','defend','Surendra',"yuvraj",'karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teenpatti','diya',"rajput",'bhai','😀','😑','😐','😊','😜','😇','😎','😂','😘','😋','😝','🥺','members','🖕','member','only','chut','lund','gand','ma ','maa ','bhosdi','bahan','loude','lode ','lavde ','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔','LUND'," LU","?","loda","lodu","telegram","chor","singh"]
+ words = ['dekho','fix','😱','😢','😳','fixer','👆','👇','match','pass','sab ','chase','defend','Surendra',"yuvraj",'karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teenpatti','diya',"rajput",'bhai','😀','😑','😐','😊','😜','😇','😎','😂','😘','😋','😝','🥺','members','🖕','member','only','chut ','lund ','gand ','ma ','maa ','bhosdi','bahan','loude','lode ','lavde ','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔','LUND'," LU","?","loda","lodu","telegram","chor","singh"]
  for word in words:
   if word.casefold() in message.text.casefold():
    f = True
