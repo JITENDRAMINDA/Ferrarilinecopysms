@@ -31,8 +31,8 @@ def forward(client, message):
     time.sleep(e.x)
 
 @app.on_deleted_messages(Filters.chat(s))
-def main(client, message):
- for v in message.messages:
+def main(client, messages):
+ for v in messages:
   file = open("sure.txt" , "r")
   lines = file.readlines()
   file.close()
