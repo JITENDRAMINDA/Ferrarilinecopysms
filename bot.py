@@ -1,8 +1,8 @@
 from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
-app =  Client ("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
-s = -1001100924541
-d = -1001274887387
+app =  Client("icc",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
+s = -1001316526418
+d = -1001464551111
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
