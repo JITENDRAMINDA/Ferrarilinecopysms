@@ -2,9 +2,9 @@ from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
 import time
 
-app =  Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
-s = -1001100924541
-d = -1001274887387
+app =  Client("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
+s = -1001262096355
+d = -1001378725482
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
@@ -48,14 +48,11 @@ def main(client, messages):
     except FloodWait as e:
      time.sleep(e.x)
 
-     
- 
 @app.on_message(Filters.command("clear"))
 def main(client, message):
   files = open("sure.txt" , "w")
   files.write("001 002")
   files.close()
   message.reply("Done") 
-
 
 app.run()
