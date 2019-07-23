@@ -2,7 +2,7 @@ from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
 import time
 
-app =  Client("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
+app =  Client("icc",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
 s = -1001100924541
 d = -1001378725482
 
