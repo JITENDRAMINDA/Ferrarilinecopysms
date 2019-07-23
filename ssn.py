@@ -19,7 +19,7 @@ def forward(client, message):
     files = open("sure.txt" , "a")
     files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
     files.close()
-        
+
 @app.on_message(Filters.chat(s) & Filters.text & Filters.edited)
 def forward(client, message):
  file = open("sure.txt" , "r")
