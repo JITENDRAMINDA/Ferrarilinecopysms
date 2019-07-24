@@ -4,7 +4,7 @@ import time
 
 app =  Client("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
 s = -1001262096355
-d = -1001378725482
+d = -1001464551111
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
