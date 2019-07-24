@@ -13,7 +13,7 @@ def forward(client, message):
   if word.casefold() in message.text.casefold():
    f = True
  if not f:
-  if '🖲️' in message.text:
+  if '🖲' in message.text:
    mes = client.send_message(d,"**" + message.text.replace('🖲️' , '💘') + "**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
@@ -46,7 +46,7 @@ def forward(client, message):
    try:
     if '📟' in message.text:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('📟' , '🌴')+"**")
-    elif '🖲️' in message.text:
+    elif '🖲' in message.text:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🖲️' , '💘')+"**")
     else:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🎾' , '⚾')+"**")
