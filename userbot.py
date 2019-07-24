@@ -44,7 +44,7 @@ def forward(client, message):
   id = str(message.message_id)
   if id in x:
    try:
-    elif '📟' in message.text:
+    if '📟' in message.text:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('📟' , '🌴')+"**")
     elif '🖲️' in message.text:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🖲️' , '💘')+"**")
