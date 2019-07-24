@@ -5,8 +5,8 @@ import time
 app =  Client("mnnn",bot_token="918985036:AAGuOy3Z00pcdp761gDouf5iEmnGz7rivR0",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 #("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
 
-s = -1001262096355
-d = -1001378725482
+s = -1001100924541
+d = -1001274887387
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
