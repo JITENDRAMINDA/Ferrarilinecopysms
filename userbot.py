@@ -64,6 +64,7 @@ def main(client, messages):
    id = str(v.message_id )
    if id in x:
     try:
+     client.edit_message_text(d,int(x[x.index(id)+1]),".")
      client.delete_messages(d,int(x[x.index(id)+1]))
     except FloodWait as e:
      time.sleep(e.x)
