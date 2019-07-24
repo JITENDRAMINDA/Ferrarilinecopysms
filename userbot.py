@@ -14,7 +14,7 @@ def forward(client, message):
    f = True
  if not f:
   if '🖲'.casefold() in message.text.casefold():
-   mes = client.send_message(int(u),"**" + message.text.replace('🖲' , '💘') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('🖲' , '💘') + "**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
