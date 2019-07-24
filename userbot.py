@@ -20,7 +20,7 @@ def forward(client, message):
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   elif '📟' in message.text:
-   mes = client.send_message(d,"**" + message.text.replace('📟' , '🌴') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('📟' , '🏝️') + "**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
