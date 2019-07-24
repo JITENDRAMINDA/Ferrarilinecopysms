@@ -14,22 +14,22 @@ def forward(client, message):
    f = True
  if not f:
   if '🖲️' in message.text:
-   mes = client.send_message(int(u),"**" + message.text.replace('🖲️' , '💘') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('🖲️' , '💘') + "**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   elif '📟' in message.text:
-   mes = client.send_message(int(u),"**" + message.text.replace('📟' , '🌴') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('📟' , '🌴') + "**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   elif 'WIDE' in message.text:
-   mes = client.send_message(int(u),"**🙇 WIDE BALL 🙇**")
+   mes = client.send_message(d,"**🙇 WIDE BALL 🙇**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   else:
-   mes = client.send_message(int(u),"**" + message.text.replace('🎾' , '⚾') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('🎾' , '⚾') + "**")
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
