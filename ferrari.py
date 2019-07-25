@@ -2,12 +2,13 @@ from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
 import time
 
-app =  Client("mnnn",bot_token="918985036:AAGuOy3Z00pcdp761gDouf5iEmnGz7rivR0",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
+app =  Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
 
-#f("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
+#b("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
+#("mnnn",bot_token="918985036:AAGuOy3Z00pcdp761gDouf5iEmnGz7rivR0",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 
-s = -1001316526418
-d = -1001464551111
+s = -1001100924541
+d = -1001274887387
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
