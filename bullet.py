@@ -4,9 +4,6 @@ import time
 
 app = Client("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
 
-#("mnnn",bot_token="918985036:AAGuOy3Z00pcdp761gDouf5iEmnGz7rivR0",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
-
-
 s = -1001262096355
 d = -1001378725482
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
