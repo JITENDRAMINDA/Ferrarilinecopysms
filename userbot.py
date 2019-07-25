@@ -44,14 +44,14 @@ def forward(client, message):
   id = str(message.message_id)
   if id in x:
    try:
-    if '📟' in message.text:
+    if '🖲'.casefold() in message.text.casefold():
+     client.edit_message_text(d,int(x[x.index(id)+1]),"**" + message.text.replace('🖲' , '💘') + "**")
+    elif '📟' in message.text:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('📟' , '🏝️')+"**")
-    elif '🖲'.casefold() in message.text.casefold():
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🖲️' , '💘')+"**")
     else:
      client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🎾' , '⚾')+"**")
    except FloodWait as e:
-    time.sleep(e.x)
+     time.sleep(e.x)
 
 @app.on_deleted_messages(Filters.chat(s))
 def main(client, messages):
