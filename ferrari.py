@@ -14,11 +14,28 @@ def forward(client, message):
   if word.casefold() in message.text.casefold():
    f = True
  if not f:
-  mes = client.send_message(d,"**" + message.text + "**")
-  files = open("sure.txt" , "a")
-  files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
-  files.close()
-      
+  if '🕵🏻'.casefold() in message.text.casefold():
+   mes = client.send_message(d,"**" + message.text.replace('🕵🏻' , '💘') + "**")
+   files = open("sure.txt" , "a")
+   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
+   files.close()
+  elif '☎️' in message.text:
+   mes = client.send_message(d,"**" + message.text.replace('☎️' , '🏝️') + "**")
+   files = open("sure.txt" , "a")
+   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
+   files.close()
+  elif 'WIDE'.casefold() in message.text.casefold():
+   mes = client.send_message(d,"**🙇 WIDE BALL 🙇**")
+   files = open("sure.txt" , "a")
+   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
+   files.close()
+  else:
+   mes = client.send_message(d,"**" + message.text.replace('🎾' , '⚾') + "**")
+   files = open("sure.txt" , "a")
+   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
+   files.close()
+
+
 @app.on_message(Filters.chat(s) & Filters.text & Filters.edited)
 def forward(client, message):
  file = open("sure.txt" , "r")
