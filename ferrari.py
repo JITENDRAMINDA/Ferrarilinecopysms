@@ -2,7 +2,7 @@ from pyrogram import Client, Filters,Emoji
 from pyrogram.errors import FloodWait
 import time
 
-app =  Client("mxx",870831,"115641a0211dbd60dfdce6f367010e5f")
+app =  Client ("mnnnnnnn",488556,"c722b7aadbf8b72109b2f96f30974c6d")
 
 s = -1001100924541
 d = -1001274887387
@@ -14,26 +14,10 @@ def forward(client, message):
   if word.casefold() in message.text.casefold():
    f = True
  if not f:
-  if '🕵🏻'.casefold() in message.text.casefold():
-   mes = client.send_message(d,"**" + message.text.replace('🕵🏻' , '💘') + "**")
-   files = open("sure.txt" , "a")
-   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
-   files.close()
-  elif '☎️' in message.text:
-   mes = client.send_message(d,"**" + message.text.replace('☎️' , '🏝️') + "**")
-   files = open("sure.txt" , "a")
-   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
-   files.close()
-  elif 'WIDE'.casefold() in message.text.casefold():
-   mes = client.send_message(d,"**🙇 WIDE BALL 🙇**")
-   files = open("sure.txt" , "a")
-   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
-   files.close()
-  else:
-   mes = client.send_message(d,"**" + message.text.replace('🎾' , '⚾') + "**")
-   files = open("sure.txt" , "a")
-   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
-   files.close()
+  mes = client.send_message(d,"**" + message.text + "**")
+  files = open("sure.txt" , "a")
+  files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
+  files.close()
       
 @app.on_message(Filters.chat(s) & Filters.text & Filters.edited)
 def forward(client, message):
@@ -45,12 +29,7 @@ def forward(client, message):
   id = str(message.message_id)
   if id in x:
    try:
-    if '☎️' in message.text:
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('☎️' , '🏝️')+"**")
-    elif '🕵🏻' in message.text:
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🕵🏻' , '💘')+"**")
-    else:
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🎾' , '⚾')+"**")
+    client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text +"**")
    except FloodWait as e:
     time.sleep(e.x)
 
