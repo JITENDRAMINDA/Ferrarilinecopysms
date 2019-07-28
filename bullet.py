@@ -15,22 +15,22 @@ def forward(client, message):
    f = True
  if not f:
   if '🖲'.casefold() in message.text.casefold():
-   mes = client.send_message(d,"**" + message.text.replace('🖲' , '💘') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('🖲' , '💘') + "**",parse_mode = "markdown" )
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   elif '📟' in message.text:
-   mes = client.send_message(d,"**" + message.text.replace('📟' , '🏝️') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('📟' , '🏝️') + "**",parse_mode = "markdown" )
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   elif 'WD'.casefold() in message.text.casefold():
-   mes = client.send_message(d,"**🙇 WIDE BALL 🙇**")
+   mes = client.send_message(d,"**🙇 WIDE BALL 🙇**",parse_mode = "markdown" )
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
   else:
-   mes = client.send_message(d,"**" + message.text.replace('🎾' , '⚾') + "**")
+   mes = client.send_message(d,"**" + message.text.replace('🎾' , '⚾') + "**",parse_mode = "markdown" )
    files = open("sure.txt" , "a")
    files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
    files.close()
@@ -46,11 +46,11 @@ def forward(client, message):
   if id in x:
    try:
     if '🖲'.casefold() in message.text.casefold():
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**" + message.text.replace('🖲' , '💘') + "**")
+     client.edit_message_text(d,int(x[x.index(id)+1]),"**" + message.text.replace('🖲' , '💘') + "**",parse_mode = "markdown" )
     elif '📟' in message.text:
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('📟' , '🏝️')+"**")
+     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('📟' , '🏝️')+"**",parse_mode = "markdown")
     else:
-     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🎾' , '⚾')+"**")
+     client.edit_message_text(d,int(x[x.index(id)+1]),"**"+message.text.replace('🎾' , '⚾')+"**",parse_mode = "markdown")
    except FloodWait as e:
      time.sleep(e.x)
 
@@ -65,7 +65,7 @@ def main(client, messages):
    id = str(v.message_id )
    if id in x:
     try:
-     client.edit_message_text(d,int(x[x.index(id)+1]),".")
+     client.edit_message_text(d,int(x[x.index(id)+1]),".",parse_mode = "markdown" )
      client.delete_messages(d,int(x[x.index(id)+1]))
     except FloodWait as e:
      time.sleep(e.x)
