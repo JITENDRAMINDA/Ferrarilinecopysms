@@ -7,12 +7,12 @@ d = -1001316388816
 @app.on_message(Filters.chat(s) & Filters.text & ~Filters.edited)
 def forward(client, message):
  f = False
- words = ["kab","mani"," id","स",'dekho',"TRUSTED",'fix','😱','😳','fixer','👆','👇','match','pass','sab ','chase','defend','Surendra',"yuvraj",'karvana','link','loss','audio','varna','puri','open','paid','yaha','aayega','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teen','diya',"rajput",'bhai','😇','😎','😂','😋',"🐴",'🥺','🖕','member','only','chut','lund','gand','ma ','maa ','bhosdi','bahan','loude','lode','lavde','chutiya','☝️','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','line','who',"https://",'bullet','fuck','🤔','LUND'," LU","?","loda","lode","lodu","telegram","chor","join","$"]
+ words = ["kab","mani"," id","स",'dekho',"TRUSTED",'fix','😱','😳','fixer','👆','👇','match','pass','sab ','chase','defend','Surendra',"yuvraj",'karvana','link','loss','audio','varna','puri','open','paid','yaha','aayega','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teen','diya',"rajput",'bhai','😇','😎','😂','😋',"🐴",'🥺','🖕','member','only','chut','lund','gand','ma ','maa ','bhosdi','bahan','loude','lode','lavde','chutiya','☝️','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','line','who',"https://",'bullet','fuck','🤔','LUND',"WICKET LU","?","loda","lode","lodu","telegram","chor","join","$"]
  for word in words:
   if word.casefold() in message.text.casefold():
    f = True
  if not f:
-  mes = client.send_message(d, "**" + message.text.replace("🇩🇪","🇳🇮").replace("🎾","🥎").replace("🖲","🧤").replace("📟","🛑").replace("WD","🔷 WIDE BALL 🔷").replace("/","~").replace("CHALU RAKHO","GAME STARTED, PLAYERS ON THE STEDIUM ") + "**")
+  mes = client.send_message(d, "<b>" + message.text.replace("🇩🇪","🇳🇮").replace("🎾","🥎").replace("🖲","🧤").replace("📟","🛑").replace("TRINBAGO","TRIBAGO").replace("WD","🔷 WIDE BALL 🔷").replace("/","~") + "</b>", parse_mode = "html")
   files = open("sure.txt" , "a")
   files.write(" " + str(message.message_id) +  " " + str(mes.message_id))
   files.close()  
